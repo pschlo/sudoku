@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sudoku-solver"
+version = "1.0.0"
+description = "A small graphical Sudoku solver"
+readme = "README.md"
+authors = [
+    { name = "pschlo", email = "70105856+pschlo@users.noreply.github.com" },
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8.4"]
+
+[project.scripts]
+sudoku = "sudoku_solver.gui:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sudoku_solver"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/README.md",
+    "/pyproject.toml",
+    "/src/sudoku_solver",
+    "/sudokus",
+    "/tests",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint.per-file-ignores]
+"src/sudoku_solver/gui.py" = ["F403", "F405"]
