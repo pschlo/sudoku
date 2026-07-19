@@ -7,7 +7,7 @@ A small graphical Sudoku solver.
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and run:
 
 ```console
-uvx --from https://github.com/pschlo/sudoku/archive/refs/heads/master.zip sudoku
+uvx https://github.com/pschlo/sudoku/archive/refs/heads/master.zip
 ```
 
 Enter digits with the keyboard, move with the arrow keys, and press Enter to solve the puzzle. Use **Open** to load one of the examples in the `sudokus` directory.
